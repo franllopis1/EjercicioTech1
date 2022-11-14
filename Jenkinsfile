@@ -57,9 +57,7 @@ spec:
             sh "az aks get-credentials --resource-group ${AKS_RESOURCE_GROUP} --name" ${AKS}
             sh 'kubelogin convert-kubeconfig -l spn'
             sh 'kubectl version'
-              }
-              )
-          ])
+          }
         }
       }
     }
