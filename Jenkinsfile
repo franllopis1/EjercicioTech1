@@ -33,9 +33,7 @@ spec:
         echo '-=- prepare build environtment -=-'
         sh 'java -version'
         sh './mvnw --version'
-        container('podman') {
-          sh 'podman --version'
-        }
+        sh 'podman --version'
       }
     }
   }
