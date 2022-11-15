@@ -21,6 +21,10 @@ spec:
         - sleep
       args:
         - infinity
+      securityContext:
+        runAsUser: 0
+        privileged: true
+
 '''
     }
   }
@@ -29,7 +33,6 @@ spec:
       steps {
         echo '-=- prepare build environtment -=-'
         sh 'java -version'
-        sh './mvnw --version'
         container('podman') {
           sh 'podman --version'
         }
